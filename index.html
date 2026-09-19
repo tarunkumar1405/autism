@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Growing Together | Autism & ADHD Parent Guide</title>
+
+<style>
+:root{
+    --green:#2f7d5b;
+    --light-green:#eaf7f0;
+    --blue:#3478c8;
+    --light-blue:#eef6ff;
+    --orange:#e98b3a;
+    --light-orange:#fff4e8;
+    --purple:#7657b8;
+    --light-purple:#f4efff;
+    --dark:#243238;
+    --text:#526168;
+    --white:#ffffff;
+    --bg:#f8faf9;
+    --border:#e1e8e5;
+    --shadow:0 10px 30px rgba(36,50,56,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--bg);
+    color:var(--dark);
+    line-height:1.6;
+}
+
+button,
+a{
+    font-family:inherit;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* TOP BAR */
+.topbar{
+    background:#234f3b;
+    color:#fff;
+    padding:9px 20px;
+    text-align:center;
+    font-size:14px;
+}
+
+/* HEADER */
+header{
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:74px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:800;
+    color:var(--green);
+    white-space:nowrap;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:22px;
+}
+
+.nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:15px;
+    font-weight:600;
+    color:#46555a;
+}
+
+.nav-links a:hover{
+    color:var(--green);
+}
+
+.language-switch{
+    display:flex;
+    background:#f1f5f3;
+    border-radius:30px;
+    padding:4px;
+}
+
+.language-switch button{
+    border:0;
+    background:transparent;
+    padding:7px 12px;
+    border-radius:20px;
+    cursor:pointer;
+    font-weight:700;
+    color:#607078;
+}
+
+.language-switch button.active{
+    background:var(--green);
+    color:#fff;
+}
+
+.menu-btn{
+    display:none;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(135deg,#eff9f3,#eef7ff);
+    padding:85px 20px;
+}
+
+.hero-inner{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    background:#dff2e8;
+    color:#246344;
+    padding:7px 14px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:52px;
+    line-height:1.12;
+    margin-bottom:20px;
+    max-width:700px;
+}
+
+.hero p{
+    font-size:19px;
+    color:var(--text);
+    max-width:680px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:13px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:10px;
+    font-weight:700;
+    border:2px solid var(--green);
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:var(--green);
+    color:#fff;
+}
+
+.btn-secondary{
+    background:#fff;
+    color:var(--green);
+}
+
+.hero-visual{
+    background:#fff;
+    border-radius:30px;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.growing-box{
+    text-align:center;
+    padding:35px 15px;
+}
+
+.growing-tree{
+    font-size:95px;
+    margin-bottom:15px;
+}
+
+.growing-box h3{
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.growing-box p{
+    font-size:16px;
+    margin:auto;
+}
+
+/* GENERAL */
+section{
+    padding:75px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    max-width:750px;
+    margin:0 auto 45px;
+}
+
+.section-title h2{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--text);
+}
+
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:24px;
+    transition:.25s;
+    box-shadow:0 4px 15px rgba(0,0,0,.03);
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:var(--shadow);
+}
+
+.icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    margin-bottom:8px;
+    font-size:19px;
+}
+
+.card p{
+    color:var(--text);
+    font-size:14px;
+}
+
+/* START HERE */
+.start-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.start-card{
+    padding:32px;
+    border-radius:22px;
+}
+
+.start-card.autism{
+    background:var(--light-green);
+}
+
+.start-card.adhd{
+    background:var(--light-blue);
+}
+
+.start-card.support{
+    background:var(--light-orange);
+}
+
+.start-card h3{
+    font-size:23px;
+    margin:10px 0;
+}
+
+.start-card p{
+    color:var(--text);
+}
+
+/* ACTIVITIES */
+.activity-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+}
+
+.activity{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+
+.activity-top{
+    padding:35px;
+    font-size:55px;
+    text-align:center;
+    background:var(--light-green);
+}
+
+.activity-content{
+    padding:22px;
+}
+
+.activity-content h3{
+    margin-bottom:8px;
+}
+
+/* HOME HELP */
+.help-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.help-item{
+    background:#fff;
+    padding:22px;
+    border-radius:17px;
+    border:1px solid var(--border);
+    display:flex;
+    gap:15px;
+    align-items:flex-start;
+    cursor:pointer;
+}
+
+.help-item:hover{
+    border-color:var(--green);
+}
+
+.help-icon{
+    font-size:27px;
+}
+
+/* TRACKER */
+.tracker{
+    background:#fff;
+    border-radius:25px;
+    padding:32px;
+    max-width:850px;
+    margin:auto;
+    box-shadow:var(--shadow);
+}
+
+.goal{
+    display:flex;
+    gap:12px;
+    padding:15px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.goal:last-child{
+    border-bottom:0;
+}
+
+.goal input{
+    width:20px;
+    height:20px;
+    accent-color:var(--green);
+}
+
+.progress-wrap{
+    margin-top:25px;
+}
+
+.progress-bar{
+    height:14px;
+    background:#e7eeeb;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    width:0%;
+    background:var(--green);
+    transition:.4s;
+}
+
+.progress-text{
+    margin-top:8px;
+    font-weight:700;
+    color:var(--green);
+}
+
+/* THERAPY */
+.therapy-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.therapy{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    border:1px solid var(--border);
+}
+
+/* RESOURCES */
+.resources{
+    background:#eef7f2;
+}
+
+.resource-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.resource{
+    background:#fff;
+    padding:24px;
+    border-radius:18px;
+}
+
+/* ARTICLES */
+.article-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.article{
+    background:#fff;
+    border-radius:18px;
+    padding:25px;
+    border:1px solid var(--border);
+}
+
+.article span{
+    font-size:13px;
+    color:var(--green);
+    font-weight:700;
+}
+
+.article h3{
+    margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+    background:#20332b;
+    color:#dbe8e2;
+    padding:50px 20px 25px;
+}
+
+.footer-inner{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+footer p,
+footer li{
+    font-size:14px;
+    color:#b9cbc3;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer li{
+    margin-bottom:7px;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:35px auto 0;
+    padding-top:20px;
+    border-top:1px solid #3b5148;
+    text-align:center;
+    font-size:13px;
+    color:#9fb2aa;
+}
+
+/* MODAL */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:2000;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    background:#fff;
+    max-width:600px;
+    width:100%;
+    border-radius:22px;
+    padding:30px;
+    position:relative;
+    max-height:85vh;
+    overflow:auto;
+}
+
+.close{
+    position:absolute;
+    right:18px;
+    top:12px;
+    border:0;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:1000px){
+
+    .grid,
+    .resource-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+}
+
+@media(max-width:760px){
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        left:0;
+        right:0;
+        top:74px;
+        background:#fff;
+        flex-direction:column;
+        align-items:flex-start;
+        padding:20px;
+        border-bottom:1px solid var(--border);
+        box-shadow:var(--shadow);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-right{
+        gap:8px;
+    }
+
+    .language-switch button{
+        padding:6px 9px;
+    }
+
+    .navbar{
+        padding:0 14px;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .hero{
+        padding:55px 18px;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:55px 18px;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .grid,
+    .start-grid,
+    .activity-grid,
+    .help-grid,
+    .therapy-grid,
+    .resource-grid,
+    .article-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar" data-i18n="topbar">
+🌱 Evidence-informed information • Practical ideas for everyday life • Built for parents
+</div>
+
+<!-- HEADER -->
+<header>
+<nav class="navbar">
+
+    <a href="#" class="logo" data-i18n="logo">
+        🌱 Growing Together
+    </a>
+
+    <div class="nav-right">
+
+        <div class="nav-links" id="navLinks">
+            <a href="#autism" data-i18n="navAutism">Autism</a>
+            <a href="#adhd" data-i18n="navADHD">ADHD</a>
+            <a href="#activities" data-i18n="navActivities">Activities</a>
+            <a href="#therapies" data-i18n="navTherapies">Therapies</a>
+            <a href="#resources" data-i18n="navResources">Resources</a>
+            <a href="#start" data-i18n="navStart">Start Here</a>
+        </div>
+
+        <div class="language-switch">
+            <button id="enBtn" class="active">🇬🇧 EN</button>
+            <button id="hiBtn">🇮🇳 हिन्दी</button>
+        </div>
+
+        <button class="menu-btn" id="menuBtn">☰</button>
+
+    </div>
+</nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+<div class="hero-inner">
+
+<div>
+
+<span class="badge" data-i18n="badge">
+Parent Guide • Autism • ADHD
+</span>
+
+<h1 data-i18n="heroTitle">
+Understanding your child is the first step to supporting them.
+</h1>
+
+<p data-i18n="heroText">
+Practical, evidence-informed information and everyday strategies for parents of autistic and ADHD children.
+</p>
+
+<div class="buttons">
+
+<a href="#start" class="btn btn-primary" data-i18n="startButton">
+Start Here
+</a>
+
+<a href="#autism" class="btn btn-secondary" data-i18n="autismButton">
+Explore Autism
+</a>
+
+<a href="#adhd" class="btn btn-secondary" data-i18n="adhdButton">
+Explore ADHD
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual">
+
+<div class="growing-box">
+
+<div class="growing-tree">🌱</div>
+
+<h3 data-i18n="heroCardTitle">
+Every child grows differently.
+</h3>
+
+<p data-i18n="heroCardText">
+The goal is not to change who your child is — it is to help them communicate, participate and become more independent.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- WHAT DO YOU NEED HELP WITH -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="helpTitle">
+What would you like help with today?
+</h2>
+
+<p data-i18n="helpText">
+Start with an everyday challenge and explore practical ideas.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+<div class="card help-popup" data-title="Communication">
+<div class="icon">💬</div>
+<h3 data-i18n="communication">Communication</h3>
+<p data-i18n="communicationText">
+Help your child express wants, needs and ideas.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Behaviour">
+<div class="icon">🧩</div>
+<h3 data-i18n="behaviour">Behaviour & Meltdowns</h3>
+<p data-i18n="behaviourText">
+Understand behaviour and respond calmly.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Attention">
+<div class="icon">🎯</div>
+<h3 data-i18n="attention">Attention</h3>
+<p data-i18n="attentionText">
+Build focus gradually through simple activities.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Social Skills">
+<div class="icon">👫</div>
+<h3 data-i18n="social">Social Skills</h3>
+<p data-i18n="socialText">
+Support interaction, play and turn-taking.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Eating">
+<div class="icon">🍽️</div>
+<h3 data-i18n="eating">Eating</h3>
+<p data-i18n="eatingText">
+Support positive mealtime routines.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Toilet Training">
+<div class="icon">🚽</div>
+<h3 data-i18n="toilet">Toilet Training</h3>
+<p data-i18n="toiletText">
+Learn practical steps for toilet independence.
+</p>
+</div>
+
+<div class="card help-popup" data-title="Daily Living">
+<div class="icon">👕</div>
+<h3 data-i18n="daily">Daily Living</h3>
+<p data-i18n="dailyText">
+Build independence in everyday routines.
+</p>
+</div>
+
+<div class="card help-popup" data-title="School Support">
+<div class="icon">🏫</div>
+<h3 data-i18n="school">School Support</h3>
+<p data-i18n="schoolText">
+Understand classroom support and communication with teachers.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- START HERE -->
+<section id="start">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="startTitle">
+Start Here
+</h2>
+
+<p data-i18n="startText">
+Learn the basics before choosing strategies or therapies.
+</p>
+
+</div>
+
+
+<div class="start-grid">
+
+<div class="start-card autism">
+
+<div class="icon">🧩</div>
+
+<h3 data-i18n="autismTitle">
+Understand Autism
+</h3>
+
+<p data-i18n="autismText">
+Learn what autism is, how it can affect communication, behaviour and social interaction, and how every child can be different.
+</p>
+
+</div>
+
+
+<div class="start-card adhd">
+
+<div class="icon">🎯</div>
+
+<h3 data-i18n="adhdTitle">
+Understand ADHD
+</h3>
+
+<p data-i18n="adhdText">
+Learn about attention, impulsivity, activity levels and practical ways to support children.
+</p>
+
+</div>
+
+
+<div class="start-card support">
+
+<div class="icon">❤️</div>
+
+<h3 data-i18n="supportTitle">
+Support Your Child
+</h3>
+
+<p data-i18n="supportText">
+Focus on communication, daily living, social participation and independence.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ACTIVITIES -->
+<section id="activities">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="activitiesTitle">
+Practical Activities
+</h2>
+
+<p data-i18n="activitiesText">
+Simple activities that parents can try during everyday routines.
+</p>
+
+</div>
+
+
+<div class="activity-grid">
+
+<div class="activity">
+
+<div class="activity-top">🍪</div>
+
+<div class="activity-content">
+
+<h3 data-i18n="activity1Title">
+“Give Me” Game
+</h3>
+
+<p data-i18n="activity1Text">
+Use a favourite item to encourage requesting with words, gestures or AAC.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-top">👋</div>
+
+<div class="activity-content">
+
+<h3 data-i18n="activity2Title">
+Copy Me
+</h3>
+
+<p data-i18n="activity2Text">
+Take turns copying simple movements, sounds or actions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="activity">
+
+<div class="activity-top">🧹</div>
+
+<div class="activity-content">
+
+<h3 data-i18n="activity3Title">
+Everyday Helper
+</h3>
+
+<p data-i18n="activity3Text">
+Involve your child in small household tasks to build independence.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- WHAT CAN I DO AT HOME -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="homeTitle">
+What can I do at home?
+</h2>
+
+<p data-i18n="homeText">
+Choose a situation to explore practical next steps.
+</p>
+
+</div>
+
+
+<div class="help-grid">
+
+<div class="help-item help-popup" data-title="Speech">
+
+<div class="help-icon">🗣️</div>
+
+<div>
+
+<h3 data-i18n="home1Title">
+My child doesn't speak
+</h3>
+
+<p data-i18n="home1Text">
+Ways to encourage communication without forcing speech.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="help-item help-popup" data-title="Meltdown">
+
+<div class="help-icon">😣</div>
+
+<div>
+
+<h3 data-i18n="home2Title">
+My child screams when upset
+</h3>
+
+<p data-i18n="home2Text">
+Understand triggers and teach safer ways to communicate.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="help-item help-popup" data-title="Instructions">
+
+<div class="help-icon">👂</div>
+
+<div>
+
+<h3 data-i18n="home3Title">
+My child doesn't follow instructions
+</h3>
+
+<p data-i18n="home3Text">
+Start with short, clear instructions and build gradually.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="help-item help-popup" data-title="Play">
+
+<div class="help-icon">🧸</div>
+
+<div>
+
+<h3 data-i18n="home4Title">
+My child finds social play difficult
+</h3>
+
+<p data-i18n="home4Text">
+Use simple turn-taking and shared-interest games.
+</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- PROGRESS TRACKER -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="trackerTitle">
+My Child's Progress
+</h2>
+
+<p data-i18n="trackerText">
+Track small everyday goals. Progress does not have to be perfect.
+</p>
+
+</div>
+
+
+<div class="tracker">
+
+<div class="goal">
+<input type="checkbox" class="goal-check">
+<label data-i18n="goal1">
+Requests for things
+</label>
+</div>
+
+<div class="goal">
+<input type="checkbox" class="goal-check">
+<label data-i18n="goal2">
+Follows simple instructions
+</label>
+</div>
+
+<div class="goal">
+<input type="checkbox" class="goal-check">
+<label data-i18n="goal3">
+Participates in daily routines
+</label>
+</div>
+
+<div class="goal">
+<input type="checkbox" class="goal-check">
+<label data-i18n="goal4">
+Uses words, gestures or AAC
+</label>
+</div>
+
+<div class="goal">
+<input type="checkbox" class="goal-check">
+<label data-i18n="goal5">
+Plays or interacts with others
+</label>
+</div>
+
+
+<div class="progress-wrap">
+
+<div class="progress-bar">
+<div class="progress" id="progress"></div>
+</div>
+
+<div class="progress-text" id="progressText">
+0% completed
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- THERAPIES -->
+<section id="therapies">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="therapyTitle">
+Therapies Explained
+</h2>
+
+<p data-i18n="therapyText">
+Understand what different professionals and approaches may focus on.
+</p>
+
+</div>
+
+
+<div class="therapy-grid">
+
+<div class="therapy">
+<h3>🗣️ <span data-i18n="speech">Speech Therapy</span></h3>
+<p data-i18n="speechText">
+Communication, understanding language, speech and alternative communication.
+</p>
+</div>
+
+<div class="therapy">
+<h3>👐 <span data-i18n="ot">Occupational Therapy</span></h3>
+<p data-i18n="otText">
+Daily living skills, participation, motor skills and sensory needs.
+</p>
+</div>
+
+<div class="therapy">
+<h3>🧩 <span data-i18n="behaviourTherapy">Behavioural Support</span></h3>
+<p data-i18n="behaviourTherapyText">
+Understanding behaviour and teaching useful skills.
+</p>
+</div>
+
+<div class="therapy">
+<h3>📚 <span data-i18n="specialEd">Special Education</span></h3>
+<p data-i18n="specialEdText">
+Individualized learning and developmental support.
+</p>
+</div>
+
+<div class="therapy">
+<h3>📱 <span data-i18n="aac">AAC</span></h3>
+<p data-i18n="aacText">
+Tools and methods that help children communicate without relying only on speech.
+</p>
+</div>
+
+<div class="therapy">
+<h3>👨‍👩‍👦 <span data-i18n="parentSupport">Parent-Mediated Support</span></h3>
+<p data-i18n="parentSupportText">
+Helping parents use communication and learning strategies during everyday routines.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- RESOURCES -->
+<section id="resources" class="resources">
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="resourceTitle">
+India Resources
+</h2>
+
+<p data-i18n="resourceText">
+Useful information for parents navigating support systems in India.
+</p>
+
+</div>
+
+
+<div class="resource-grid">
+
+<div class="resource">
+<h3>🪪 <span data-i18n="resource1">UDID & Disability Certificate</span></h3>
+<p data-i18n="resource1Text">
+Understand the basic process and documents parents may need.
+</p>
+</div>
+
+<div class="resource">
+<h3>🏫 <span data-i18n="resource2">Education Support</span></h3>
+<p data-i18n="resource2Text">
+Information about school support, accommodations and inclusive education.
+</p>
+</div>
+
+<div class="resource">
+<h3>🇮🇳 <span data-i18n="resource3">Government Schemes</span></h3>
+<p data-i18n="resource3Text">
+Explore government programs and disability-related support.
+</p>
+</div>
+
+<div class="resource">
+<h3>🤝 <span data-i18n="resource4">Support Directory</span></h3>
+<p data-i18n="resource4Text">
+Find useful organizations, professionals and parent resources.
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- ARTICLES -->
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+<h2 data-i18n="articleTitle">
+Parent Guide
+</h2>
+
+<p data-i18n="articleText">
+Simple explanations for common questions parents have.
+</p>
+
+</div>
+
+
+<div class="article-grid">
+
+<div class="article">
+
+<span data-i18n="articleTag">BEHAVIOUR</span>
+
+<h3 data-i18n="article1">
+Meltdown vs. Tantrum
+</h3>
+
+<p data-i18n="article1Text">
+Understanding the difference can help parents respond more appropriately.
+</p>
+
+</div>
+
+
+<div class="article">
+
+<span data-i18n="articleTag2">COMMUNICATION</span>
+
+<h3 data-i18n="article2">
+Encouraging Communication at Home
+</h3>
+
+<p data-i18n="article2Text">
+Small everyday opportunities can support meaningful communication.
+</p>
+
+</div>
+
+
+<div class="article">
+
+<span data-i18n="articleTag3">LEARNING</span>
+
+<h3 data-i18n="article3">
+Helping Children Follow Instructions
+</h3>
+
+<p data-i18n="article3Text">
+Use simple language, visual support and gradual steps.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-inner">
+
+<div>
+
+<h3 data-i18n="footerLogo">
+🌱 Growing Together
+</h3>
+
+<p data-i18n="footerText">
+Practical, parent-friendly information for supporting autistic and ADHD children.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 data-i18n="footerExplore">
+Explore
+</h3>
+
+<ul>
+<li><a href="#autism" data-i18n="navAutism">Autism</a></li>
+<li><a href="#adhd" data-i18n="navADHD">ADHD</a></li>
+<li><a href="#activities" data-i18n="navActivities">Activities</a></li>
+<li><a href="#therapies" data-i18n="navTherapies">Therapies</a></li>
+</ul>
+
+</div>
+
+
+<div>
+
+<h3 data-i18n="footerImportant">
+Important
+</h3>
+
+<p data-i18n="disclaimer">
+This website provides educational information only. It is not a substitute for diagnosis, medical advice, therapy or professional care.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="copyright" data-i18n="copyright">
+© 2026 Growing Together. Built with care for parents and children.
+</div>
+
+</footer>
+
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close" id="closeModal">×</button>
+
+<h2 id="modalTitle">Topic</h2>
+
+<p id="modalText" style="margin-top:15px;color:#526168;">
+Information will appear here.
+</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* ============================
+   TRANSLATIONS
+============================ */
+
+const translations = {
+
+en:{
+
+topbar:"🌱 Evidence-informed information • Practical ideas for everyday life • Built for parents",
+logo:"🌱 Growing Together",
+
+navAutism:"Autism",
+navADHD:"ADHD",
+navActivities:"Activities",
+navTherapies:"Therapies",
+navResources:"Resources",
+navStart:"Start Here",
+
+badge:"Parent Guide • Autism • ADHD",
+
+heroTitle:"Understanding your child is the first step to supporting them.",
+
+heroText:"Practical, evidence-informed information and everyday strategies for parents of autistic and ADHD children.",
+
+startButton:"Start Here",
+autismButton:"Explore Autism",
+adhdButton:"Explore ADHD",
+
+heroCardTitle:"Every child grows differently.",
+
+heroCardText:"The goal is not to change who your child is — it is to help them communicate, participate and become more independent.",
+
+helpTitle:"What would you like help with today?",
+
+helpText:"Start with an everyday challenge and explore practical ideas.",
+
+communication:"Communication",
+communicationText:"Help your child express wants, needs and ideas.",
+
+behaviour:"Behaviour & Meltdowns",
+behaviourText:"Understand behaviour and respond calmly.",
+
+attention:"Attention",
+attentionText:"Build focus gradually through simple activities.",
+
+social:"Social Skills",
+socialText:"Support interaction, play and turn-taking.",
+
+eating:"Eating",
+eatingText:"Support positive mealtime routines.",
+
+toilet:"Toilet Training",
+toiletText:"Learn practical steps for toilet independence.",
+
+daily:"Daily Living",
+dailyText:"Build independence in everyday routines.",
+
+school:"School Support",
+schoolText:"Understand classroom support and communication with teachers.",
+
+startTitle:"Start Here",
+
+startText:"Learn the basics before choosing strategies or therapies.",
+
+autismTitle:"Understand Autism",
+
+autismText:"Learn what autism is, how it can affect communication, behaviour and social interaction, and how every child can be different.",
+
+adhdTitle:"Understand ADHD",
+
+adhdText:"Learn about attention, impulsivity, activity levels and practical ways to support children.",
+
+supportTitle:"Support Your Child",
+
+supportText:"Focus on communication, daily living, social participation and independence.",
+
+activitiesTitle:"Practical Activities",
+
+activitiesText:"Simple activities that parents can try during everyday routines.",
+
+activity1Title:"“Give Me” Game",
+
+activity1Text:"Use a favourite item to encourage requesting with words, gestures or AAC.",
+
+activity2Title:"Copy Me",
+
+activity2Text:"Take turns copying simple movements, sounds or actions.",
+
+activity3Title:"Everyday Helper",
+
+activity3Text:"Involve your child in small household tasks to build independence.",
+
+homeTitle:"What can I do at home?",
+
+homeText:"Choose a situation to explore practical next steps.",
+
+home1Title:"My child doesn't speak",
+
+home1Text:"Ways to encourage communication without forcing speech.",
+
+home2Title:"My child screams when upset",
+
+home2Text:"Understand triggers and teach safer ways to communicate.",
+
+home3Title:"My child doesn't follow instructions",
+
+home3Text:"Start with short, clear instructions and build gradually.",
+
+home4Title:"My child finds social play difficult",
+
+home4Text:"Use simple turn-taking and shared-interest games.",
+
+trackerTitle:"My Child's Progress",
+
+trackerText:"Track small everyday goals. Progress does not have to be perfect.",
+
+goal1:"Requests for things",
+goal2:"Follows simple instructions",
+goal3:"Participates in daily routines",
+goal4:"Uses words, gestures or AAC",
+goal5:"Plays or interacts with others",
+
+therapyTitle:"Therapies Explained",
+
+therapyText:"Understand what different professionals and approaches may focus on.",
+
+speech:"Speech Therapy",
+speechText:"Communication, understanding language, speech and alternative communication.",
+
+ot:"Occupational Therapy",
+otText:"Daily living skills, participation, motor skills and sensory needs.",
+
+behaviourTherapy:"Behavioural Support",
+behaviourTherapyText:"Understanding behaviour and teaching useful skills.",
+
+specialEd:"Special Education",
+specialEdText:"Individualized learning and developmental support.",
+
+aac:"AAC",
+aacText:"Tools and methods that help children communicate without relying only on speech.",
+
+parentSupport:"Parent-Mediated Support",
+parentSupportText:"Helping parents use communication and learning strategies during everyday routines.",
+
+resourceTitle:"India Resources",
+
+resourceText:"Useful information for parents navigating support systems in India.",
+
+resource1:"UDID & Disability Certificate",
+resource1Text:"Understand the basic process and documents parents may need.",
+
+resource2:"Education Support",
+resource2Text:"Information about school support, accommodations and inclusive education.",
+
+resource3:"Government Schemes",
+resource3Text:"Explore government programs and disability-related support.",
+
+resource4:"Support Directory",
+resource4Text:"Find useful organizations, professionals and parent resources.",
+
+articleTitle:"Parent Guide",
+
+articleText:"Simple explanations for common questions parents have.",
+
+articleTag:"BEHAVIOUR",
+article1:"Meltdown vs. Tantrum",
+article1Text:"Understanding the difference can help parents respond more appropriately.",
+
+articleTag2:"COMMUNICATION",
+article2:"Encouraging Communication at Home",
+article2Text:"Small everyday opportunities can support meaningful communication.",
+
+articleTag3:"LEARNING",
+article3:"Helping Children Follow Instructions",
+article3Text:"Use simple language, visual support and gradual steps.",
+
+footerLogo:"🌱 Growing Together",
+
+footerText:"Practical, parent-friendly information for supporting autistic and ADHD children.",
+
+footerExplore:"Explore",
+
+footerImportant:"Important",
+
+disclaimer:"This website provides educational information only. It is not a substitute for diagnosis, medical advice, therapy or professional care.",
+
+copyright:"© 2026 Growing Together. Built with care for parents and children."
+
+},
+
+hi:{
+
+topbar:"🌱 प्रमाण-आधारित जानकारी • रोज़मर्रा की ज़िंदगी के लिए उपयोगी सुझाव • माता-पिता के लिए बनाया गया",
+
+logo:"🌱 Growing Together",
+
+navAutism:"ऑटिज़्म",
+navADHD:"ADHD",
+navActivities:"गतिविधियाँ",
+navTherapies:"थेरेपी",
+navResources:"संसाधन",
+navStart:"यहाँ से शुरू करें",
+
+badge:"Parent Guide • ऑटिज़्म • ADHD",
+
+heroTitle:"अपने बच्चे को समझना, उसका सहयोग करने की पहली सीढ़ी है।",
+
+heroText:"ऑटिज़्म और ADHD वाले बच्चों के माता-पिता के लिए सरल, प्रमाण-आधारित जानकारी और रोज़मर्रा में काम आने वाले सुझाव।",
+
+startButton:"यहाँ से शुरू करें",
+autismButton:"ऑटिज़्म समझें",
+adhdButton:"ADHD समझें",
+
+heroCardTitle:"हर बच्चा अपने तरीके से आगे बढ़ता है।",
+
+heroCardText:"लक्ष्य बच्चे को बदलना नहीं है — बल्कि उसकी communication, भागीदारी और आत्मनिर्भरता को बढ़ाने में मदद करना है।",
+
+helpTitle:"आज आपको किस विषय में मदद चाहिए?",
+
+helpText:"रोज़मर्रा की किसी समस्या को चुनें और उससे जुड़े उपयोगी सुझाव देखें।",
+
+communication:"Communication",
+communicationText:"बच्चे को अपनी जरूरत, इच्छा और विचार व्यक्त करने में मदद करें।",
+
+behaviour:"व्यवहार और Meltdown",
+behaviourText:"व्यवहार को समझें और शांत तरीके से प्रतिक्रिया देना सीखें।",
+
+attention:"ध्यान और Focus",
+attentionText:"सरल गतिविधियों के माध्यम से धीरे-धीरे ध्यान बढ़ाएँ।",
+
+social:"Social Skills",
+socialText:"बातचीत, खेल और बारी-बारी से खेलने में मदद करें।",
+
+eating:"खाना",
+eatingText:"खाने के समय अच्छी और नियमित आदतें विकसित करने में मदद करें।",
+
+toilet:"Toilet Training",
+toiletText:"Toilet में आत्मनिर्भरता के लिए आसान कदम सीखें।",
+
+daily:"रोज़मर्रा के काम",
+dailyText:"दैनिक कामों में बच्चे की आत्मनिर्भरता बढ़ाएँ।",
+
+school:"School Support",
+schoolText:"स्कूल में सहायता और शिक्षकों के साथ बेहतर communication को समझें।",
+
+startTitle:"यहाँ से शुरू करें",
+
+startText:"Strategies या therapies चुनने से पहले मूल बातें समझें।",
+
+autismTitle:"ऑटिज़्म को समझें",
+
+autismText:"ऑटिज़्म क्या है, इसका communication, behaviour और social interaction पर क्या प्रभाव हो सकता है और हर बच्चा किस तरह अलग हो सकता है — यह समझें।",
+
+adhdTitle:"ADHD को समझें",
+
+adhdText:"ध्यान, impulsivity, activity level और बच्चों की मदद करने के व्यावहारिक तरीकों के बारे में जानें।",
+
+supportTitle:"अपने बच्चे का सहयोग करें",
+
+supportText:"Communication, daily living, social participation और independence पर ध्यान दें।",
+
+activitiesTitle:"आसान गतिविधियाँ",
+
+activitiesText:"ऐसी सरल गतिविधियाँ जिन्हें माता-पिता रोज़मर्रा के कामों के दौरान कर सकते हैं।",
+
+activity1Title:"“मुझे दो” Game",
+
+activity1Text:"पसंदीदा चीज़ का उपयोग करके words, gestures या AAC के माध्यम से मांग करना सिखाएँ।",
+
+activity2Title:"मेरी नकल करो",
+
+activity2Text:"सरल movements, sounds या actions की बारी-बारी से नकल करें।",
+
+activity3Title:"घर का छोटा Helper",
+
+activity3Text:"बच्चे को घर के छोटे-छोटे कामों में शामिल करके independence बढ़ाएँ।",
+
+homeTitle:"मैं घर पर क्या कर सकता/सकती हूँ?",
+
+homeText:"किसी स्थिति को चुनें और उसके लिए व्यावहारिक अगले कदम देखें।",
+
+home1Title:"मेरा बच्चा बोलता नहीं है",
+
+home1Text:"बिना speech के लिए दबाव डाले communication को बढ़ावा देने के तरीके।",
+
+home2Title:"परेशान होने पर मेरा बच्चा चिल्लाता है",
+
+home2Text:"Triggers को समझें और communication के सुरक्षित तरीके सिखाएँ।",
+
+home3Title:"मेरा बच्चा instructions follow नहीं करता",
+
+home3Text:"छोटे और स्पष्ट instructions से शुरुआत करें और धीरे-धीरे आगे बढ़ें।",
+
+home4Title:"मेरा बच्चा social play में कठिनाई महसूस करता है",
+
+home4Text:"Simple turn-taking और बच्चे की पसंद वाले shared-interest games का उपयोग करें।",
+
+trackerTitle:"मेरे बच्चे की Progress",
+
+trackerText:"छोटे-छोटे रोज़मर्रा के goals को track करें। Progress का perfect होना जरूरी नहीं है।",
+
+goal1:"अपनी जरूरत की चीज़ मांगता है",
+goal2:"सरल instructions follow करता है",
+goal3:"रोज़मर्रा की routines में भाग लेता है",
+goal4:"Words, gestures या AAC का उपयोग करता है",
+goal5:"दूसरों के साथ खेलता या interact करता है",
+
+therapyTitle:"Therapies को समझें",
+
+therapyText:"अलग-अलग professionals और approaches किन skills पर ध्यान दे सकते हैं, यह समझें।",
+
+speech:"Speech Therapy",
+speechText:"Communication, language understanding, speech और alternative communication पर काम।",
+
+ot:"Occupational Therapy",
+otText:"Daily living skills, participation, motor skills और sensory needs पर काम।",
+
+behaviourTherapy:"Behavioural Support",
+behaviourTherapyText:"Behaviour को समझना और उपयोगी skills सिखाने में सहायता।",
+
+specialEd:"Special Education",
+specialEdText:"बच्चे की जरूरत के अनुसार learning और developmental support।",
+
+aac:"AAC",
+aacText:"ऐसे tools और तरीकों की मदद जिनसे बच्चा केवल speech पर निर्भर हुए बिना communicate कर सके।",
+
+parentSupport:"Parent-Mediated Support",
+parentSupportText:"रोज़मर्रा की routines में parents को communication और learning strategies इस्तेमाल करने में मदद।",
+
+resourceTitle:"भारत में उपयोगी संसाधन",
+
+resourceText:"भारत में support systems को समझने वाले माता-पिता के लिए उपयोगी जानकारी।",
+
+resource1:"UDID और Disability Certificate",
+resource1Text:"Basic process और आवश्यक documents के बारे में जानकारी।",
+
+resource2:"Education Support",
+resource2Text:"School support, accommodations और inclusive education से जुड़ी जानकारी।",
+
+resource3:"Government Schemes",
+resource3Text:"Government programs और disability-related support के बारे में जानकारी।",
+
+resource4:"Support Directory",
+resource4Text:"Useful organizations, professionals और parent resources खोजें।",
+
+articleTitle:"Parent Guide",
+
+articleText:"माता-पिता के सामान्य सवालों के आसान जवाब और जानकारी।",
+
+articleTag:"BEHAVIOUR",
+article1:"Meltdown और Tantrum में अंतर",
+
+article1Text:"अंतर समझने से माता-पिता परिस्थिति में बेहतर तरीके से प्रतिक्रिया दे सकते हैं।",
+
+articleTag2:"COMMUNICATION",
+article2:"घर पर Communication को बढ़ावा देना",
+
+article2Text:"रोज़मर्रा के छोटे-छोटे अवसर meaningful communication को बढ़ाने में मदद कर सकते हैं।",
+
+articleTag3:"LEARNING",
+article3:"बच्चे को Instructions follow करने में मदद करना",
+
+article3Text:"Simple language, visual support और छोटे-छोटे steps का उपयोग करें।",
+
+footerLogo:"🌱 Growing Together",
+
+footerText:"ऑटिज़्म और ADHD वाले बच्चों के सहयोग के लिए सरल और parent-friendly जानकारी।",
+
+footerExplore:"Explore",
+
+footerImportant:"महत्वपूर्ण",
+
+disclaimer:"यह वेबसाइट केवल educational information देती है। यह diagnosis, medical advice, therapy या professional care का विकल्प नहीं है।",
+
+copyright:"© 2026 Growing Together. माता-पिता और बच्चों के लिए देखभाल के साथ बनाया गया।"
+
+}
+
+};
+
+
+/* ============================
+   LANGUAGE SWITCH
+============================ */
+
+function setLanguage(language){
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+
+        const key = element.getAttribute("data-i18n");
+
+        if(translations[language][key]){
+            element.textContent = translations[language][key];
+        }
+
+    });
+
+    document.documentElement.lang =
+        language === "hi" ? "hi" : "en";
+
+    localStorage.setItem("growingTogetherLanguage",language);
+
+    document.getElementById("enBtn")
+        .classList.toggle("active",language === "en");
+
+    document.getElementById("hiBtn")
+        .classList.toggle("active",language === "hi");
+}
+
+
+document.getElementById("enBtn").addEventListener("click",()=>{
+    setLanguage("en");
+});
+
+document.getElementById("hiBtn").addEventListener("click",()=>{
+    setLanguage("hi");
+});
+
+
+/* ============================
+   LOAD SAVED LANGUAGE
+============================ */
+
+const savedLanguage =
+    localStorage.getItem("growingTogetherLanguage") || "en";
+
+setLanguage(savedLanguage);
+
+
+/* ============================
+   MOBILE MENU
+============================ */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",()=>{
+    navLinks.classList.toggle("show");
+});
+
+
+document.querySelectorAll(".nav-links a").forEach(link=>{
+    link.addEventListener("click",()=>{
+        navLinks.classList.remove("show");
+    });
+});
+
+
+/* ============================
+   PROGRESS TRACKER
+============================ */
+
+const checkboxes =
+    document.querySelectorAll(".goal-check");
+
+const progress =
+    document.getElementById("progress");
+
+const progressText =
+    document.getElementById("progressText");
+
+
+function updateProgress(){
+
+    let completed = 0;
+
+    checkboxes.forEach((checkbox,index)=>{
+
+        if(checkbox.checked){
+            completed++;
+        }
+
+        localStorage.setItem(
+            "goal_"+index,
+            checkbox.checked
+        );
+
+    });
+
+    const percentage =
+        Math.round((completed / checkboxes.length) * 100);
+
+    progress.style.width = percentage + "%";
+
+    progressText.textContent =
+        percentage + "% completed";
+}
+
+
+checkboxes.forEach((checkbox,index)=>{
+
+    const saved =
+        localStorage.getItem("goal_"+index);
+
+    if(saved === "true"){
+        checkbox.checked = true;
+    }
+
+    checkbox.addEventListener("change",updateProgress);
+
+});
+
+
+updateProgress();
+
+
+/* ============================
+   MODAL
+============================ */
+
+const modal =
+    document.getElementById("modal");
+
+const modalTitle =
+    document.getElementById("modalTitle");
+
+const modalText =
+    document.getElementById("modalText");
+
+const closeModal =
+    document.getElementById("closeModal");
+
+
+document.querySelectorAll(".help-popup")
+.forEach(item=>{
+
+    item.addEventListener("click",()=>{
+
+        const topic =
+            item.getAttribute("data-title");
+
+        modalTitle.textContent = topic;
+
+        if(topic === "Speech"){
+
+            modalText.textContent =
+            "Communication can include speech, gestures, signs, pictures or AAC. Focus on giving your child meaningful reasons to communicate.";
+
+        }
+        else if(topic === "Meltdown"){
+
+            modalText.textContent =
+            "Try to identify triggers such as communication difficulty, sensory overload, tiredness or changes in routine. Keep the environment safe and calm.";
+
+        }
+        else if(topic === "Instructions"){
+
+            modalText.textContent =
+            "Use your child's name, give one short instruction at a time, reduce distractions and praise successful attempts.";
+
+        }
+        else if(topic === "Play"){
+
+            modalText.textContent =
+            "Start with your child's interests. Join their play, imitate what they do and gradually introduce turn-taking.";
+
+        }
+        else{
+
+            modalText.textContent =
+            "This section can contain detailed parent-friendly guidance, practical examples and professional resources.";
+
+        }
+
+        modal.classList.add("show");
+
+    });
+
+});
+
+
+closeModal.addEventListener("click",()=>{
+    modal.classList.remove("show");
+});
+
+
+modal.addEventListener("click",(event)=>{
+
+    if(event.target === modal){
+        modal.classList.remove("show");
+    }
+
+});
+
+
+document.addEventListener("keydown",(event)=>{
+
+    if(event.key === "Escape"){
+        modal.classList.remove("show");
+    }
+
+});
+
+</script>
+
+</body>
+</html>
