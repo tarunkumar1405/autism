@@ -94,3 +94,24 @@ document.querySelectorAll(".nav-links a")
     });
 
 });
+// Footer links for all pages
+document.addEventListener("DOMContentLoaded", () => {
+
+    const footer = document.querySelector(".footer");
+
+    if (footer) {
+        const footerLinks = document.createElement("div");
+        footerLinks.className = "footer-links";
+
+        footerLinks.innerHTML = `
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="terms.html">Terms & Conditions</a>
+        `;
+
+        footer.prepend(footerLinks);
+    }
+});
